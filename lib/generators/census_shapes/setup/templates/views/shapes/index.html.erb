@@ -1,0 +1,89 @@
+<div class="span-18 last top">
+  <a href="http://polymaps.org/">Census-Shapes</a>::
+  <%= select_tag :MODEL_NAME_type, options_for_select(MODEL_NAME.available_shapes.map{|g| [g[1]['name'], g[1]['slug']]}), :onchange => 'loadLayer()'%>
+</div>
+<div id="map" class="span-24 last"></div>
+<style type="text/css">
+  .layer path{
+    fill: lightsteelblue;
+    fill-opacity: .5;
+    stroke: steelblue;
+  	stroke-width: 1px;
+  }
+</style>
+
+<script type="text/javascript">
+
+var po=org.polymaps,
+map=po.map()
+.container(document.getElementById("map")
+.appendChild(po.svg("svg")))
+.add(po.interact())
+.add(po.hash());
+
+map.add(
+  po.image()
+  .url(po.url("http://{S}tile.cloudmade.com/1a1b06b230af4efdbb989ea99e9841af/998/256/{Z}/{X}/{Y}.png")
+  .hosts(["a.","b.","c.",""])));
+
+map.center({lat: 39, lon: -96}).zoom(4);
+loadLayer();
+
+function segment(template) {
+  return function(c) {
+   var max = 1 << c.zoom, column = c.column % max;
+   if (column < 0) column += max;	
+    return template.replace(/{(.)}/g, function(s, v) {
+      switch (v) {
+        case "T":{
+					return document.getElementById('MODEL_NAME_type').value;
+				}
+				case "Z": return c.zoom;
+				case "X": return column;
+				case "Y": return c.row;
+				case "B": {
+				  var nw = map.coordinateLocation({row: c.row, column: column, zoom: c.zoom}),
+				      se = map.coordinateLocation({row: c.row + 1, column: column + 1, zoom: c.zoom}),
+				      pn = Math.ceil(Math.log(c.zoom) / Math.LN2);
+				  return nw.lon.toFixed(pn)
+				      + "," + se.lat.toFixed(pn)
+				      + "," + se.lon.toFixed(pn)
+				      + "," + nw.lat.toFixed(pn);
+				}
+      }
+      return v;
+    });
+  };
+}
+
+function loadLayer(){
+  map_layer = po.geoJson()
+    .url(segment("/{T}/{Z}/{X}/{Y}.json"))
+    .on("load", load)
+    .id("map_layer")
+    .clip(false);
+  map.add(map_layer);
+
+  compass_layer = po.compass().pan("small");
+  map.add(compass_layer);
+}
+
+function load(e) {
+  for (var i = 0; i < e.features.length; i++) {
+    var feature = e.features[i];
+    var properties = feature.data.properties
+    feature.element.setAttribute("id", properties.id)
+		feature.element.setAttribute("name", properties.name)
+		feature.element.setAttribute("class", properties.class)
+    feature.element.appendChild(po.svg("title")
+     .appendChild(document.createTextNode(properties.name+" "+0+")"))
+     .parentNode);
+ 	}
+}
+
+
+
+(function(){function d(){if(b=!b){c.style("position","fixed").style("border-width",0).style("width","100%").style("height","100%").style("top",0).style("left",0);a.style("position","fixed").style("right","16px").style("top","16px");e.attr("transform","translate(16,16)rotate(135)scale(5)translate(-1.85,0)");f.style("visibility","hidden").style("overflow","hidden")}else{c.style("position",null).style("border-width",null).style("width",null).style("height",null).style("top",null).style("left",null);
+a.style("position","absolute").style("right","-16px").style("top","-16px");e.attr("transform","translate(16,16)rotate(-45)scale(5)translate(-1.85,0)");f.style("visibility",null).style("overflow",null)}map.resize()}var f=n$(document.body),c=n$("#map").style("visibility","visible"),b=false,a=c.add("svg:svg").attr("width",32).attr("height",32).style("position","absolute").style("right","-16px").style("top","-16px").style("visibility","visible").on("mousedown",d);a.add("svg:circle").attr("cx",16).attr("cy",
+16).attr("r",14).attr("fill","#fff").attr("stroke","#ccc").attr("stroke-width",4).add("svg:title").text("Toggle fullscreen. (ESC)");var e=a.add("svg:path").attr("transform","translate(16,16)rotate(-45)scale(5)translate(-1.85,0)").attr("d","M0,0L0,.5 2,.5 2,1.5 4,0 2,-1.5 2,-.5 0,-.5Z").attr("pointer-events","none").attr("fill","#aaa");window.addEventListener("keydown",function(g){g.keyCode==27&&b&&d()},false)})();
+</script>

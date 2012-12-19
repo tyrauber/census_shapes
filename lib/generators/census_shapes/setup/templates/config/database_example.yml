@@ -1,0 +1,29 @@
+development:
+  adapter: postgresql
+  host: localhost
+  encoding: utf8
+  database: census_development
+  template: template_postgis
+  username: USERNAME
+  password: PASSWORD
+  postgis_path: /usr/local/share/postgis/
+  
+production:
+  adapter: postgresql
+  host: localhost
+  encoding: utf8
+  database: census_production
+  template: template_postgis
+  username: USERNAME
+  password: PASSWORD
+  postgis_path: /usr/local/share/postgis/
+
+test:
+  adapter: postgresql
+  host: localhost
+  encoding: utf8
+  database: census_test
+  template: template_postgis
+  username: USERNAME
+  password: PASSWORD
+  postgis_path: /usr/local/share/postgis/

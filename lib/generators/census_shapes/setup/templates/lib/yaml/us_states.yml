@@ -1,0 +1,209 @@
+---
+Alabama:
+  id: 1
+  abbr: AL
+  name: Alabama
+Alaska:
+  id: 2
+  abbr: AK
+  name: Alaska
+Arizona:
+  id: 4
+  abbr: AZ
+  name: Arizona
+Arkansas:
+  id: 5
+  abbr: AR
+  name: Arkansas
+California:
+  id: 6
+  abbr: CA
+  name: California
+Colorado:
+  id: 8
+  abbr: CO
+  name: Colorado
+Connecticut:
+  id: 9
+  abbr: CT
+  name: Connecticut
+Delaware:
+  id: 10
+  abbr: DE
+  name: Delaware
+District of Columbia:
+  id: 11
+  abbr: DC
+  name: District of Columbia
+Florida:
+  id: 12
+  abbr: FL
+  name: Florida
+Georgia:
+  id: 13
+  abbr: GA
+  name: Georgia
+Hawaii:
+  id: 15
+  abbr: HI
+  name: Hawaii
+Idaho:
+  id: 16
+  abbr: ID
+  name: Idaho
+Illinois:
+  id: 17
+  abbr: IL
+  name: Illinois
+Indiana:
+  id: 18
+  abbr: IN
+  name: Indiana
+Iowa:
+  id: 19
+  abbr: IA
+  name: Iowa
+Kansas:
+  id: 20
+  abbr: KS
+  name: Kansas
+Kentucky:
+  id: 21
+  abbr: KY
+  name: Kentucky
+Louisiana:
+  id: 22
+  abbr: LA
+  name: Louisiana
+Maine:
+  id: 23
+  abbr: ME
+  name: Maine
+Maryland:
+  id: 24
+  abbr: MD
+  name: Maryland
+Massachusetts:
+  id: 25
+  abbr: MA
+  name: Massachusetts
+Michigan:
+  id: 26
+  abbr: MI
+  name: Michigan
+Minnesota:
+  id: 27
+  abbr: MN
+  name: Minnesota
+Mississippi:
+  id: 28
+  abbr: MS
+  name: Mississippi
+Missouri:
+  id: 29
+  abbr: MO
+  name: Missouri
+Montana:
+  id: 30
+  abbr: MT
+  name: Montana
+Nebraska:
+  id: 31
+  abbr: NE
+  name: Nebraska
+Nevada:
+  id: 32
+  abbr: NV
+  name: Nevada
+New Hampshire:
+  id: 33
+  abbr: NH
+  name: New Hampshire
+New Jersey:
+  id: 34
+  abbr: NJ
+  name: New Jersey
+New Mexico:
+  id: 35
+  abbr: NM
+  name: New Mexico
+New York:
+  id: 36
+  abbr: NY
+  name: New York
+North Carolina:
+  id: 37
+  abbr: NC
+  name: North Carolina
+North Dakota:
+  id: 38
+  abbr: ND
+  name: North Dakota
+Ohio:
+  id: 39
+  abbr: OH
+  name: Ohio
+Oklahoma:
+  id: 40
+  abbr: OK
+  name: Oklahoma
+Oregon:
+  id: 41
+  abbr: OR
+  name: Oregon
+Pennsylvania:
+  id: 42
+  abbr: PA
+  name: Pennsylvania
+Rhode Island:
+  id: 44
+  abbr: RI
+  name: Rhode Island
+South Carolina:
+  id: 45
+  abbr: SC
+  name: South Carolina
+South Dakota:
+  id: 46
+  abbr: SD
+  name: South Dakota
+Tennessee:
+  id: 47
+  abbr: TN
+  name: Tennessee
+Texas:
+  id: 48
+  abbr: TX
+  name: Texas
+Utah:
+  id: 49
+  abbr: UT
+  name: Utah
+Vermont:
+  id: 50
+  abbr: VT
+  name: Vermont
+Virginia:
+  id: 51
+  abbr: VA
+  name: Virginia
+Washington:
+  id: 53
+  abbr: WA
+  name: Washington
+West Virginia:
+  id: 54
+  abbr: WV
+  name: West Virginia
+Wisconsin:
+  id: 55
+  abbr: WI
+  name: Wisconsin
+Wyoming:
+  id: 56
+  abbr: WY
+  name: Wyoming
+Puerto Rico:
+  id: 72
+  abbr: PR
+  name: Puerto Rico
