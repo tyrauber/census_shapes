@@ -97,26 +97,27 @@ The validate_geometry rake task will test and repair the geometries of all impor
 Census-Geographies will import the following 22 Geographic Summary Levels:
 
 **Sumlevel - Slug:  Name**
-040 - STATE:  State
-050 - COUNTY:  County
-060 - COUSUB:  County Subdivision
-067 - SUBMCD:  Subminor Civil Subdivision
-101 - BLOCK:  Block
-140 - TRACT: Tract
-150 - BG:  Blockgroup
-160 - PLACE:  Place
-230 - ANRC: Alaska Native Regional Corporation
-280 - AIANNH: American Indian Area/Alaska Native Area/Hawaiian Home Land
-281 - AITS: American Indian Tribal Subdivision
-320 - CBSA:  Metropolitan Statistical Area/Micropolitan Statistical Area
-323 - METDIV: Metropolitan Division
-340 - CSA: Combined Statistical Area
-500 - CD: Congressional District (111th)
-610 - SLDU: State Legislative District (Upper Chamber)
-620 - SLDL:  State Legislative District (Lower Chamber)
-700 - VTD: Voting District
-871 - ZCTA5: ZIP Code Tabulation Area (5-Digit)
-950 - ELSD: School District (Elementary)
-960 - SCSD: School District (Secondary)
-970 - UNSD: School District (Unified)
+
+ * 040 - STATE:  State
+ * 050 - COUNTY:  County
+ * 060 - COUSUB:  County Subdivision
+ * 067 - SUBMCD:  Subminor Civil Subdivision
+ * 101 - BLOCK:  Block
+ * 140 - TRACT: Tract
+ * 150 - BG:  Blockgroup
+ * 160 - PLACE:  Place
+ * 230 - ANRC: Alaska Native Regional Corporation
+ * 280 - AIANNH: American Indian Area/Alaska Native Area/Hawaiian Home Land
+ * 281 - AITS: American Indian Tribal Subdivision
+ * 320 - CBSA:  Metropolitan Statistical Area/Micropolitan Statistical Area
+ * 323 - METDIV: Metropolitan Division
+ * 340 - CSA: Combined Statistical Area
+ * 500 - CD: Congressional District (111th)
+ * 610 - SLDU: State Legislative District (Upper Chamber)
+ * 620 - SLDL:  State Legislative District (Lower Chamber)
+ * 700 - VTD: Voting District
+ * 871 - ZCTA5: ZIP Code Tabulation Area (5-Digit)
+ * 950 - ELSD: School District (Elementary)
+ * 960 - SCSD: School District (Secondary)
+ * 970 - UNSD: School District (Unified)
 

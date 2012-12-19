@@ -67,7 +67,7 @@ class Create<%= controller_name.titleize.gsub(' ', '').gsub(/\W/,'') %> < Active
         t.float :aland10, :length => 8
         t.float :awater10,  :length => 8
         t.point :latlng, :srid=> 4326
-        t.geometry :geom
+        t.geometry :geom, :srid=> 4326
         t.decimal :intptlat10, :precision => 15, :scale => 12
         t.decimal :intptlon10, :precision => 15, :scale => 12 
     end
