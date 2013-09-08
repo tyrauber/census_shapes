@@ -136,6 +136,7 @@ namespace :census_shapes do
     if !File.exist?("#{local_path}#{shape}/#{file}.zip") 
       `mkdir -p #{local_path}#{shape}`
       ftp = Net::FTP.new(CENSUS_HOST)
+      ftp.passive = true
       ftp.login(user = "anonymous")
       ftp.chdir(path)
       ftp.getbinaryfile("#{file}.zip", "#{local_path}#{shape}/#{file}.zip")
