@@ -149,7 +149,7 @@ namespace :census_shapes do
   end
 
   def self.import_shapefiles(file, shape, archive)
-    `shp2pgsql -W Latin1 -g geom -a -D #{local_path}#{shape}/#{file}/#{file} CONTROLLER_NAME #{TEMPLATE} | psql -h #{HOST} -U #{USER} -d #{DB}`
+    `shp2pgsql -W Latin1 -g geom -s 4326 -a -D #{local_path}#{shape}/#{file}/#{file} CONTROLLER_NAME #{TEMPLATE} | psql -h #{HOST} -U #{USER} -d #{DB}`
     `rm -rf #{local_path}#{shape}/#{file}`
     if archive.nil?
       `rm #{local_path}#{shape}/#{file}.zip`
